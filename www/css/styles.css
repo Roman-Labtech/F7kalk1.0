@@ -1,0 +1,88 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+ @font-face {
+    font-family:  'a_lcdnova', sans-serif!important;  
+    src: local('a_lcdnova'), 
+   url('/font/a_lcdnova.ttf') format('truetype');
+}
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+
+.icon-settings{
+    display: block!important;
+    float: left!important;
+    margin-top: -1px!important;
+	padding-right: 5px!important;}
+body{
+/*font-family: 'Roboto+Condensed', sans-serif!important;    */
+font-family: 'Roboto', arial;
+font-size: 14px;
+   
+}
+
+.sekund-style{
+ font-family: 'Rajdhani', sans-serif!important;   
+    border: transparent;
+    font-size: 60px;
+    font-weight: 800;
+} 
+.center-timer{
+	display: block;
+	align-content: center;
+}
+
+.mainlinks{
+	padding-left: 15px;
+	color: black;
+}
+
+.result_style{
+font-family: 'Rajdhani', sans-serif!important;
+    border: transparent;
+    font-size: 60px;
+    font-weight: 800;
+    width: 210px;
+    margin-left: 20px;
+}
+.panel_white{
+color:#2a2a2a;!important
+}
+.icon_green{
+    color: green;
+}
+.icon_red{
+    color:red;
+}
+.icon_blue{
+    color:#0845fa;
+}
+.toppadding20px{
+    padding-top: 20px;
+}
+.t-indent{
+    text-indent: 20px;
+    text-align: justify;
+}
+.content-white{
+    background-color: white;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow:1px 1px 13px rgba(0, 0, 0, 0.38);
+-webkit-box-shadow:1px 1px 13px rgba(0, 0, 0, 0.38);
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin-bottom: 70px;    
+}
