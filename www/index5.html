@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2196f3">
+
+<link href="http://allfont.net/allfont.css?fonts=a_lcdnova" rel="stylesheet" type="text/css" />
+    <title>Kalculator</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">  
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fonts/a_lcdnova.ttf">
+    <link rel="stylesheet" href="fonts/a_lcdnova.woff">
+    <link rel="icon" href="img/icon.png">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+ <!--   <script type="text/javascript" charset="utf-8" src="js/my-app.js"></script>    -->
+    <script type="text/javascript" charset="utf-8">
+ 
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() 
+    {
+    navigator.splashscreen.show();   
+    animateNavBackIcon:true; 
+   // document.addEventListener("deviceready", onDeviceReady, false);    
+    };
+    // device APIs are available
+    </script> 
+     
+  <script type="text/javascript" charset="utf-8" src="js/cordova_plugins.js">
+  </script>
+   <script> document.addEventListener("deviceready", appReady, false); 
+             function appReady(){ 
+               document.addEventListener('backbutton', function (e) {
+e.preventDefault();
+/* Check for open panels */
+if ($$('.panel.active').length > 0) {
+f7.closePanel();
+return;
+}
+/* Check for go back in history */
+var view = f7.getCurrentView();
+if (!view) return;
+if (view.history.length > 1) {
+view.router.back();
+return;
+}
+/*Quit app */
+navigator.notification.confirm(
+‘Exit Application ?’, // message
+function (n) {
+if (n == 1) navigator.app.exitApp();
+},
+‘Bite To Eat’, // title
+['OK', ‘Cancel’] // button labels
+);
+}, false)
+
+             } </script>
+ <script>
+          function exitFromApp()
+       {
+           navigator.app.exitApp();
+       }; 
+      </script>         
+  </head>
+  
+  
+<body onload="startTime()" class="theme-orange" onload="onLoad()">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+ <div class="panel panel-left panel-reveal panelgrey">
+		<a href="index.html"><img src="img/222.png" width="100%"></a>
+      <div class="content-block">
+
+ 
+<div class="list-block accordion-list">
+  <ul>
+
+
+      
+
+   	<script>
+    var myApp = new Framework7();
+    var $$ = Dom7;
+ 
+    $$('.open-left-panel').on('click', function (e) {
+        // 'left' position to open Left panel
+        myApp.openPanel('left');
+    });
+    $$('.open-right-panel').on('click', function (e) {
+        // 'right' position to open Right panel
+        myApp.openPanel('right');
+    }); 
+		
+    $$('.panel-close').on('click', function (e) {
+        myApp.closePanel();
+    });
+ 
+  function phonecall1(){
+      
+           window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613, true);
+            alert("ccc");
+        }
+        function phonecall2(){
+            alert("phonecall2");
+        }
+  </script>
+   	
+   
+	  <li class="accordion-item">
+        <a href="#" onclick="phonecall2()" data-ignore-cache="true">
+			<div class="item-inner">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-home">home</i>
+                Главная</div>       
+			 </div>
+         </a>       
+      </li>
+      
+      	  <li class="accordion-item">
+        <a href="#about" onclick="ClearСlock()" data-ignore-cache="true" class="graylink">
+			<div class="item-inner">
+				<div class="item-title mainlinks panel_white panel-close">		 
+		          <i class="material-icons icon-home">cached</i>
+              <span>Новый расчет</span>  </div>       
+			 </div>
+         </a>       
+      </li>
+    
+      <li class="accordion-item">
+        <a href="#" onclick="phonecall2()" data-ignore-cache="true">
+			<div class="item-inner">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">call</i>
+                Позвонить нам   </div>       
+			 </div>
+         </a>       
+      </li>
+        <li class="accordion-item">
+        <a href="#" onclick="phonecall1()" data-ignore-cache="true">
+			<div class="item-inner">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">call</i>
+             <span> Позвонить нам 11 </span>    </div>       
+			 </div>
+         </a>       
+      </li>          
+   	   	 <li class="accordion-item">
+			<div class="item-inner">
+			  <a href="question.html" data-ignore-cache="true" class="graylink close-panel">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">help</i>
+		          Справка</div>   
+		      </a>      
+        </div>
+    </li>
+   	<li class="accordion-item">        
+		<div class="item-inner">
+			  <a href="#" data-ignore-cache="true" class="graylink" onClick="exitFromApp()">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">cancel</i> Выход      
+                </div>
+             </a> 
+        </div> 
+   	</li>
+
+   	
+   	
+
+  </ul>
+</div>     
+	       
+
+		  
+  
+   
+      </div>
+    </div>
+   
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <!-- Navbar inner for Index page-->
+          <div data-page="index" class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding"></div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          <!-- Navbar inner for About page-->
+          <div data-page="about" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span></span></a></div>
+            <div class="center sliding"></div>
+               <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          <!-- Navbar inner for izm1 page-->
+          <div data-page="izm1" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span></span></a></div>
+            <div class="center"></div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          <!-- Navbar inner for izm2 page-->
+          <div data-page="izm2" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span></span></a></div>
+            <div class="center sliding"></div>
+                <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+         <!-- Navbar inner for izm3 page-->
+          <div data-page="izm3" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span></span></a></div>
+            <div class="center sliding"></div>
+                <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+              <!-- Navbar inner for sredn page-->
+          <div data-page="sredn" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span></span></a></div>
+            <div class="center sliding"></div>
+                <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+          
+            
+              <div class="content-block">
+                     <div class="content-white">
+                <div class="content-block-inner">
+             <p style="color:#0373cc">
+                        <a href="#" onclick="phonecall2"> Калькулятор вязкости на показаниях вискозиметра ВЗ-246.</a>
+                    </p>
+                    
+     <img src="img/vz-246-stativ1.png" width="50%" style="
+    margin: auto;
+    display: block;">
+    
+<p>
+    Приложение для определения вязкости испытуемых жидкостей, с помощью вискозиметра ВЗ-246. <br>
+    <br><b>Порядок проведения измерений:</b><br><br>
+    1. Выберите диаметр сопла<br>
+    2. Введите температуру, при которой производятся измерения<br>
+    3. Рассчитайте время истечения испытуемой жидкости.<br>
+    4. Калькулятор выдаст вам полученное значение. Для точного расчета проведите измерения 3 раза.
+   <br><br>
+             <a href="#about" class="button button-fill">ДАЛЕЕ</a> 
+</p>
+						 </div>
+                  </div>
+                </div>
+			  </div>
+           </div>
+          <!-- About Page-->
+          <div data-page="about" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+      
+                   <div class="content-white">
+					   <h3 style="center">Выберите диаметр сопла</h3>
+					   <p>
+					   	Выберите диаметр сопла вискозиметра. По умолчанию выбрано сопло 4 мм.
+					   </p>
+                <form class="list-block" name="diamform">
+    <div class="list-block">
+  <ul>
+    <!-- Single radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <!-- Checked by default -->
+        <input type="radio" name="my-radio" >
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">2 мм.</div>
+        </div>
+      </label>
+    </li>
+    <!-- Another radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <input type="radio" name="my-radio" checked="checked">
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">4 мм.</div>
+        </div>
+      </label>
+    </li>
+        <!-- Another radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <input type="radio" name="my-radio">
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">6 мм.</div>
+        </div>
+      </label>
+    </li>
+  </ul>
+         </div> </form> 
+         <br>
+          <a href="#izm1" class="button button-fill">ДАЛЕЕ</a> 
+
+				
+				  </div>
+              </div>
+            </div>
+          </div>
+          <!-- izm1 Page-->
+          <div data-page="izm1" class="page cached" >
+           
+            <div class="page-content">
+              <div class="content-block">
+                  <div class="content-white">
+                  	   <h3 style="center">1 шаг.</h3>
+                 <p>
+                  	Первый замер времени истечения.
+                  </p>
+                <p>
+         <form class="list-block" name="MyForm">   
+
+        <br>
+        
+        <div style="display:block; margin: auto">
+        <div style="display:block; margin: auto">
+        <input name="stopwatch" type="text" placeholder="00:00:00" class="" style="  font-family: 'a_LCDNova', arial;; font-size: 5em;height:100px; text-align: center;">
+            </div>
+   		</div><br>
+					   <div class="row">
+				<div class="col-50">
+				   <a href="#" class="button button-fill color-green" name="stopwatch" onclick="StartStop1()">Старт/Стоп</a>
+				</div>
+				  <div class="col-50">
+				   <a href="#" class="button button-fill color-red" name="clearclock" onclick="ClearСlock()">Сброс</a>            
+				  </div>
+				</div>
+  
+       <!-- <input name="resultpole" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;>-->
+      
+       <!-- <input name="stopwatch3x" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;><br>
+        <<input name="stopwatch4x" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;>-->
+		</form>
+			
+              <a href="#izm2" class="button button-fill">ДАЛЕЕ</a>
+              </div>
+			  </div>
+            </div>
+          </div>
+          <!-- izm2 Page-->
+          <div data-page="izm2" class="page cached">
+          <div class="page-content">
+              <div class="content-block">
+                  <div class="content-white">
+                  	   <h3 style="center">2 шаг.</h3>
+                   <p>
+                  	Второй замер времени истечения.
+                  	 
+                  </p>
+                 <form class="list-block" name="MyForm2">   
+
+        <br>
+        
+        <div style="display:block; margin: auto">
+        <div style="display:block; margin: auto">
+        <input name="stopwatch2" type="text" placeholder="00:00:00" class="" style="  font-family: 'a_LCDNova', arial;; font-size: 5em;height:100px; text-align: center;">
+            </div>
+   		</div>
+        
+        <br>
+      <!--  <input name="resultpole2" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;>
+          <br>
+        <input name="stopwatch3x" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;><br>
+        <input name="stopwatch4x" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;>-->
+        
+               <div class="row">
+        <div class="col-50">
+             <a href="#" class="button button-fill color-green" name="stop2" onclick="StartStop2()">Старт/стоп</a>
+        </div>
+          <div class="col-50">
+             <a href="#" class="button button-fill color-red" name="clear2" onclick="ClearСlock2()">Сброс</a>            
+          </div>
+        </div>
+        <br>
+          <a href="#izm3" class="button button-fill">ДАЛЕЕ</a>
+</form>
+     <br>
+           
+              </div>
+			  </div>
+            </div>
+         
+          </div>
+          
+            <!-- IZM3 Page-->
+          <div data-page="izm3" class="page cached">
+          <div class="page-content">
+              <div class="content-block">
+                  <div class="content-white">
+                  	   <h3 style="center">3 шаг.</h3>
+                  <p>
+                  	Третий замер времени истечения.
+                  </p>
+               
+                 <form class="list-block" name="MyForm3">   
+                 
+                 	<div style="display:block; margin: auto">
+					<div style="display:block; margin: auto">
+					
+					<input name="stopwatch3" type="text" placeholder="00:00:00" class="" style="  font-family: 'a_LCDNova', arial;; font-size: 5em; height:100px; text-align: center;">
+					
+						</div>
+					</div>
+					<br>
+				
+					  <br>
+				   <div class="row">
+					<div class="col-50">
+						 <a href="#" class="button button-fill color-green" name="stop3" onclick="StartStop3()">Старт/стоп</a>
+					</div>
+					  <div class="col-50">
+						 <a href="#" class="button button-fill color-red" name="clear3" onclick="ClearСlock()">Сброс</a>            
+					  </div>
+					</div>
+					<br>
+   	   <a href="#sredn" class="button button-fill" onclick="middle()">ДАЛЕЕ</a>
+				
+				
+				</form>
+              </div>
+			  </div>
+            </div>
+          </div>
+                   <!-- sredn Page-->
+          <div data-page="sredn" class="page cached" oninput="middle()" >
+            <div class="page-content" onload=middle()>
+              <div class="content-block">
+                  <div class="content-white">
+         <h3 style="center">4 шаг.</h3>
+                  <p>
+                   Вычисленное среднее значение по результатам трех измерений
+                    </p>
+                  <div>
+                  	<div style="float:left; padding: 10px;">
+                  		Первое измерение, секунд
+                  	</div>
+                  	<div>
+                  		<form name="middlesumm1">
+                  			<input name="middlesumm1x" type="text" placeholder="00:00" class="" style="font-family:Rajdhani; font-size: 2em;  border: none;">
+                  		</form>
+                  	</div>
+                  </div><br>
+                  
+                   <div>
+						<div style="float:left; padding: 10px;">
+							Второе измерение, секунд
+						</div>
+						<div>
+							<form name="middlesumm2">
+								<input name="middlesumm2x" type="text" placeholder="00:00" class="" style="font-family:Rajdhani; font-size: 2em;  border: none;">
+							</form>
+						</div>
+                  </div><br>	
+                  <div>
+                  	<div style="float:left; padding: 10px;">
+                  		Третье измерение, секунд
+                  	</div>
+                  	<div clsass="">
+						<form name="middlesumm3">
+							<input name="middlesumm3x" type="text" placeholder="00:00" class="" style="font-family:Rajdhani; font-size: 2em;  border: none;">
+						</form>
+                  	</div>
+                  </div>	
+                  	
+                
+				 <p>
+					Среднее значение по результатам 3-х измерений в секундах:
+					<br><br>
+				 
+				 </p>
+              <br>
+              <form name="Formmiddle">
+              	 <input name="middlepole" type="text" placeholder="00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;  border: none; width: 100%;
+    text-align: center;">
+              </form>
+              <a href="#izm2" class="button button-full">ДАЛЕЕ</a>
+              </div>
+			  </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner color-black"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+      <script type="text/javascript" src="js/framework7.min.js"></script>
+     <script type="text/javascript" src="js/my-app2.js"></script>  
+    <script type="text/javascript" src="js/CallNumber.js"></script>
+  </body>
+</html>
