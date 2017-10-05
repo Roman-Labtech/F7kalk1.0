@@ -1,6 +1,6 @@
 {
     "name": "com.roman.app",
-    "displayName": "app3",
+    "displayName": "app4",
     "version": "2.0.1",
     "description": "A sample Apache Cordova application that responds to the deviceready event.",
     "main": "index.js",
