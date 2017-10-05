@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+
+<link href="http://allfont.net/allfont.css?fonts=a_lcdnova" rel="stylesheet" type="text/css" />
+    <title>Kalculator</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet"> 
+    
+    <!-- <link href="http://allfont.ru/allfont.css?fonts=a_lcdnova" rel="stylesheet" type="text/css" />-->
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fonts/a_lcdnova.ttf">
+    <link rel="stylesheet" href="fonts/a_lcdnova.woff">
+    <link rel="icon" href="img/icon.png">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+ <!--   <script type="text/javascript" charset="utf-8" src="js/my-app.js"></script>    -->
+    <script type="text/javascript" charset="utf-8">
+ 
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() 
+    {
+    navigator.splashscreen.show();   
+    animateNavBackIcon:true; 
+   // document.addEventListener("deviceready", onDeviceReady, false);    
+    };
+    // device APIs are available
+    </script> 
+     
+  <script type="text/javascript" charset="utf-8" src="js/cordova_plugins.js">
+  </script>
+   <script> document.addEventListener("deviceready", appReady, false); 
+             function appReady(){ 
+               document.addEventListener('backbutton', function (e) {
+e.preventDefault();
+/* Check for open panels */
+if ($$('.panel.active').length > 0) {
+f7.closePanel();
+return;
+}
+/* Check for go back in history */
+var view = f7.getCurrentView();
+if (!view) return;
+if (view.history.length > 1) {
+view.router.back();
+return;
+}
+/*Quit app */
+navigator.notification.confirm(
+‘Exit Application ?’, // message
+function (n) {
+if (n == 1) navigator.app.exitApp();
+},
+‘Bite To Eat’, // title
+['OK', ‘Cancel’] // button labels
+);
+}, false)
+
+             } </script>
+ <script>
+          function exitFromApp()
+       {
+           navigator.app.exitApp();
+       }; 
+      </script>         
+  </head>
+
+
+  <body onload="startTime()" class="theme-orange" onload="onLoad()">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal panelgrey">
+		<a href="index.html"><img src="img/222.png" width="100%"></a>
+      <div class="content-block">
+
+ 
+<div class="list-block accordion-list">
+  <ul>
+
+
+      
+
+   	<script>
+    var myApp = new Framework7();
+    var $$ = Dom7;
+ 
+    $$('.open-left-panel').on('click', function (e) {
+        // 'left' position to open Left panel
+        myApp.openPanel('left');
+    });
+    $$('.open-right-panel').on('click', function (e) {
+        // 'right' position to open Right panel
+        myApp.openPanel('right');
+    }); 
+    $$('.panel-close').on('click', function (e) {
+        myApp.closePanel();
+    });
+ 
+  function phonecall1(){
+      
+           window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613, true);
+            alert("ccc");
+        }
+        function phonecall2(){
+            alert("phonecall2");
+        }
+  </script>
+   	
+   
+
+    
+      <li class="accordion-item">
+        <a href="#" onclick="phonecall2()" data-ignore-cache="true">
+			<div class="item-inner">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">call</i>
+                Позвонить нам   </div>       
+			 </div>
+         </a>       
+      </li>
+        <li class="accordion-item">
+        <a href="#" onclick="phonecall1()" data-ignore-cache="true">
+			<div class="item-inner">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">call</i>
+                Позвонить нам 11   </div>       
+			 </div>
+         </a>       
+      </li>          
+   	   	 <li class="accordion-item">
+			<div class="item-inner">
+			  <a href="question.html" data-ignore-cache="true" class="graylink close-panel">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">help</i>
+		          Справка</div>   
+		      </a>      
+        </div>
+    </li>
+   	<li class="accordion-item">        
+		<div class="item-inner">
+			  <a href="#" data-ignore-cache="true" class="graylink" onClick="exitFromApp()">
+				<div class="item-title mainlinks panel_white">		 
+		          <i class="material-icons icon-settings">cancel</i> Выход      
+                </div>
+             </a> 
+        </div> 
+   	</li>
+
+   	
+   	
+
+  </ul>
+</div>     
+	       
+
+		  
+  
+   
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="left">
+           
+              </div>
+            <div class="center sliding"></div>
+            <div class="right">
+                <a href="#" class="link icon-only open-panel"> 
+              <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content keep-tabbar-on-scroll hide-navbar-on-scroll">
+              <div class="content-block">
+                <div class="content-block-inner">
+                   <div class="content-white">
+                   
+                    <p style="color:#0373cc">
+                        <a href="#" onclick="phonecall2"> Калькулятор вязкости на показаниях вискозиметра ВЗ-246.</a>
+                    </p>
+                    
+     <img src="img/vz-246-stativ1.png" width="50%" style="
+    margin: auto;
+    display: block;">
+    
+<p>
+    Приложение для определения вязкости испытуемых жидкостей, с помощью вискозиметра ВЗ-246. <br>
+    <br><b>Порядок проведения измерений:</b><br><br>
+    1. Выберите диаметр сопла<br>
+    2. Введите температуру, при которой производятся измерения<br>
+    3. Рассчитайте время истечения испытуемой жидкости.<br>
+    4. Калькулятор выдаст вам полученное значение. Для точного расчета проведите измерения 3 раза.
+    <a href="paintlist.html">paintlist</a>
+</p>
+    <br><!-- <label for="fader">Volume</label>
+<input type="range" min="20" max="25" value="20" id="fader" 
+	step="1" oninput="outputUpdate(value)">
+<output for="fader" id="volume">22</output>-->
+      
+             <a href="#about" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About</div>
+                        </div>
+                      </div></a> 
+                      
+   <!-- About Page-->
+          <div data-page="about" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+                <p>You may go <a href="#" class="back">back</a> or load <a href="#services">Services</a> page.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor.    </p>
+                <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+                <p>Suspendisse commodo adipiscing urna, a aliquet sem egestas in. Sed tincidunt dui a magna facilisis bibendum. Nunc euismod consectetur lorem vitae molestie. Proin mattis tellus libero, non hendrerit neque eleifend ac. Pellentesque interdum velit at lacus consectetur scelerisque et id dui. Praesent non fringilla dui, a elementum purus. Proin vitae lacus libero. Nunc eget lectus non mi iaculis interdum vel a velit. Nullam tincidunt purus id lacus ornare, at elementum turpis euismod. Cras mauris enim, congue eu nisl sit amet, pulvinar semper erat. Suspendisse sed mauris diam.</p>
+                <p>Nam eu mauris leo. Pellentesque aliquam vehicula est, sed lobortis tellus malesuada facilisis. Fusce at hendrerit ligula. Donec eu nibh convallis, pulvinar enim quis, lacinia diam. Ut semper ac magna nec ornare. Integer placerat justo sed nunc suscipit facilisis. Vestibulum ac tincidunt augue. Duis eu aliquet mauris, vel luctus mauris. Nulla non augue nec diam pharetra posuere at in mauris.</p>
+              </div>
+            </div>
+          </div>
+    
+     <form class="list-block" name="diamform">
+    <div class="list-block">
+  <ul>
+    <!-- Single radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <!-- Checked by default -->
+        <input type="radio" name="my-radio" checked="checked">
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">2 мм.</div>
+        </div>
+      </label>
+    </li>
+    <!-- Another radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <input type="radio" name="my-radio" value="Movies" onclick="check1()">
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">4 мм.</div>
+        </div>
+      </label>
+    </li>
+        <!-- Another radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <input type="radio" name="my-radio" value="Movies">
+        <div class="item-media">
+          <i class="icon icon-form-radio"></i>
+        </div>
+        <div class="item-inner">
+          <div class="item-title">6 мм.</div>
+        </div>
+      </label>
+    </li>
+  </ul>
+         </div> </form> 
+
+ <form class="list-block" name="MyForm">   
+       <div class="row">
+        <div class="col-50">
+             <a href="#" class="button button-fill" name="stopwatch" onclick="StartStop1()">Запуск</a>
+        </div>
+          <div class="col-50">
+             <a href="#" class="button button-fill" name="clearclock" onclick="ClearСlock()">Сброс</a>            
+          </div>
+        </div>
+        <br>
+        
+        <div style="display:block; margin: auto">
+        <div style="display:block; margin: auto">
+        <input name="stopwatch" type="text" placeholder="00:00:00" class="" style="  font-family: 'a_LCDNova', arial;; font-size: 5em;height:100px; text-align: center;">
+            </div>
+   		</div>
+        
+        <br>
+        <input name="resultpole" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;>
+          <br>
+        <input name="stopwatch3x" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;><br>
+        <input name="stopwatch4x" type="text" placeholder="00:00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;"; align:center;>
+</form>
+ 
+    <a href="popkoeff.html" class="button button-fill" name="aboutbutt">Далее</a>
+    <a href="diametr.html">Diameter</a>
+    <br>
+         <a href="kalkulator.html" onclick="view1()">Kalculator</a>
+          <br>
+                  <a href="popkoeff.html" onclick="view1()">Popcoeff</a>
+      
+      
+               <br><br>
+                 <a href="kalkulator.html">kalcul</a>
+                  <br>
+                    </div>
+                  </div>
+              </div>         
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+
+<div class="toolbar tabbar tabbar-labels toolbar-bottom" data-page="tabs-animated">
+    <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link active">
+            <i class="icon demo-icon-1"></i>
+            <span class="tabbar-label">Диаметр</span>
+        </a>
+        <a href="#tab2" class="tab-link">
+            <i class="icon demo-icon-2">
+                <span class="badge bg-red">5</span>
+            </i>
+            <span class="tabbar-label">Поп коэф</span>
+        </a>
+        <a href="#tab3" class="tab-link">
+            <i class="icon demo-icon-3"></i>
+            <span class="tabbar-label">Время</span>
+        </a>
+    </div>
+</div>
+        </div>     
+      
+      
+      
+      
+<script type="text/javascript">
+	
+function view1(){
+var mainView1 = myApp.addView('.mainview1', {
+    // Because we want to use dynamic navbar, we need to enable it for this view:
+    dynamicNavbar: true
+});
+};
+</script>
+     
+
+     
+    
+    
+    
+    
+    
+
+    </div>
+    <!-- Path to Framework7 Library JS-->
+      <script type="text/javascript" src="js/framework7.min.js"></script>
+ <script type="text/javascript" src="js/my-app2.js"></script>  
+    <script type="text/javascript" src="js/CallNumber.js"></script>
+    
+    <script>
+    var myApp = new Framework7({
+    swipePanel: 'left'
+         });
+    </script>
+ <script type="text/javascript">
+      function button(){
+          alert("FFF");
+      };
+     
+
+      </script>
+
+  </body>
+</html>
