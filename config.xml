@@ -51,8 +51,7 @@
 
     <engine name="android" spec="^6.2.3" />
     <!--<plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />-->
-    <plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin" />
-    <plugin name="CordovaCallNumberPlugin-master" spec="plugins/CordovaCallNumberPlugin-master" />
+    <plugin name="CordovaCallNumberPlugin-master" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin" />
     <plugin name="cordova-plugin-console" />
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-inappbrowser" />
