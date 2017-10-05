@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "CordovaCallNumberPlugin@https://github.com/Rohfosho/CordovaCallNumberPlugin",
+        "scope": null,
+        "escapedName": "CordovaCallNumberPlugin",
+        "name": "CordovaCallNumberPlugin",
+        "rawSpec": "https://github.com/Rohfosho/CordovaCallNumberPlugin",
+        "spec": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:Rohfosho/CordovaCallNumberPlugin.git",
+          "sshUrl": "git+ssh://git@github.com/Rohfosho/CordovaCallNumberPlugin.git",
+          "httpsUrl": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+          "gitUrl": "git://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+          "shortcut": "github:Rohfosho/CordovaCallNumberPlugin",
+          "directUrl": "https://raw.githubusercontent.com/Rohfosho/CordovaCallNumberPlugin/master/package.json"
+        }
+      },
+      "C:\\Users\\Kate\\Desktop\\app3\\node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+  "_id": "call-number@1.0.1",
+  "_inCache": true,
+  "_location": "/call-number",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "CordovaCallNumberPlugin@https://github.com/Rohfosho/CordovaCallNumberPlugin",
+    "scope": null,
+    "escapedName": "CordovaCallNumberPlugin",
+    "name": "CordovaCallNumberPlugin",
+    "rawSpec": "https://github.com/Rohfosho/CordovaCallNumberPlugin",
+    "spec": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:Rohfosho/CordovaCallNumberPlugin.git",
+      "sshUrl": "git+ssh://git@github.com/Rohfosho/CordovaCallNumberPlugin.git",
+      "httpsUrl": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+      "gitUrl": "git://github.com/Rohfosho/CordovaCallNumberPlugin.git",
+      "shortcut": "github:Rohfosho/CordovaCallNumberPlugin",
+      "directUrl": "https://raw.githubusercontent.com/Rohfosho/CordovaCallNumberPlugin/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git#8b3e3af394fc68fdcb75278e85c1ec48d0944016",
+  "_shasum": "2e672526d8635e38b950b495a66ccabb4a008d34",
+  "_shrinkwrap": null,
+  "_spec": "CordovaCallNumberPlugin@https://github.com/Rohfosho/CordovaCallNumberPlugin",
+  "_where": "C:\\Users\\Kate\\Desktop\\app3\\node_modules",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Rohfosho/CordovaCallNumberPlugin/issues"
+  },
+  "cordova": {
+    "id": "call-number",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Call Number from Cordova Application",
+  "devDependencies": {},
+  "gitHead": "8b3e3af394fc68fdcb75278e85c1ec48d0944016",
+  "homepage": "https://github.com/Rohfosho/CordovaCallNumberPlugin#readme",
+  "keywords": [
+    "cordova",
+    "call",
+    "dialer",
+    "phonegap",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0",
+  "name": "call-number",
+  "optionalDependencies": {},
+  "readme": "CordovaCallNumberPlugin\r\n=======================\r\n\r\nCall a number directly from your cordova application.\r\n\r\nInstall the plugin using:\r\n\r\n``` java\r\ncordova plugin add https://github.com/Rohfosho/CordovaCallNumberPlugin.git\r\n```\r\n\r\nor\r\n\r\n``` java\r\nnpm install call-number\r\n```\r\n\r\nUse the plugin in your JS file:\r\n``` javascript\r\nwindow.plugins.CallNumber.callNumber(onSuccess, onError, number, bypassAppChooser);\r\n```\r\n\r\n**number:** *String;* phone number to call (e.g. \"1234567890\")\r\n\r\n**bypassAppChooser:** *boolean;* true if you always wish to bypass the app chooser if user has multiple applications installed that can handle calls\r\n\r\nMake sure to create onSuccess and onError call back functions.\r\n\r\nExample:\r\n``` java\r\nfunction onSuccess(result){\r\n  console.log(\"Success:\"+result);\r\n}\r\n\r\nfunction onError(result) {\r\n  console.log(\"Error:\"+result);\r\n}\r\n```\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohfosho/CordovaCallNumberPlugin.git"
+  },
+  "version": "1.0.1"
+}
