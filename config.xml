@@ -47,7 +47,7 @@
     <!--<plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />
     <plugin name="CordovaCallNumberPlugin-master" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin" />-->
     <plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin" />
-    <plugin name="cordova-plugin-console"  spec="https://github.com/apache/cordova-plugin-console/>"/>
+   <!-- <plugin name="cordova-plugin-console"  spec="https://github.com/apache/cordova-plugin-console>"/>-->
     <plugin name="cordova-plugin-dialogs" spec="https://github.com/apache/cordova-plugin-dialogs/>"/>
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen.git"/> 
