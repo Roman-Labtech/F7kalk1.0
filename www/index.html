@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#2196f3">
     <meta name="format-detection" content="telephone=yes">
 
-<link href="http://allfont.net/allfont.css?fonts=a_lcdnova" rel="stylesheet" type="text/css" />
+	<link href="http://allfont.net/allfont.css?fonts=a_lcdnova" rel="stylesheet" type="text/css" />
     <title>Kalculator</title>
     <link rel="stylesheet" href="css/framework7.material.css">
     <link rel="stylesheet" href="css/framework7.material.colors.css">
@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="fonts/a_lcdnova.ttf">
     <link rel="stylesheet" href="fonts/a_lcdnova.woff">
     <link rel="icon" href="img/icon.png">
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
- <!--   <script type="text/javascript" charset="utf-8" src="js/my-app.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+ 	<!--   <script type="text/javascript" charset="utf-8" src="js/my-app.js"></script>
          <script type="text/javascript" charset="utf-8" src="js/cordova_plugins.js">
  
             
@@ -44,7 +44,7 @@
 				
       	   function phonecall1()
 		{
-           window.plugins.CallNumber.CallNumber(onSuccess, onError,88313367613, true);
+           window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613);
 		   };
 			   </script>
 			   
@@ -275,7 +275,7 @@ if (n == 1) navigator.app.exitApp();
     3. Рассчитайте время истечения испытуемой жидкости.<br>
     4. Калькулятор выдаст вам полученное значение. Для точного расчета проведите измерения 3 раза.
    <br><br>
-             <a href="#about" class="button button-fill">ДАЛЕЕ</a> 
+    <a href="#about" class="button button-fill">ДАЛЕЕ</a> 
 </p>
 						 </div>
                   </div>
@@ -518,17 +518,37 @@ if (n == 1) navigator.app.exitApp();
               	 <input name="middlepole" type="text" placeholder="00:00" class="" style="font-family:Rajdhani; font-size: 5em;height:100px;  border: none; width: 100%;
     text-align: center;">
               </form>
-              <a href="#izm2" class="button button-full">ДАЛЕЕ</a>
+              <a href="#izm2" class="button button-full next_button">ДАЛЕЕ</a>
               </div>
 			  </div>
             </div>
           </div>
           
         </div>
-        <!-- Bottom Toolbar-->
+        <!-- Bottom Toolbar
         <div class="toolbar">
           <div class="toolbar-inner color-black"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
-        </div>
+        </div>-->
+        
+        <div class="toolbar tabbar toolbar-bottom tabbar-labels">
+    <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link active barsbottom">
+            <i class="icon demo-icon-1"></i>
+            <span class="tabbar-label">Label 1</span>
+        </a>
+        <a href="#tab2" class="tab-link barsbottom">
+            <i class="icon demo-icon-2">
+                <span class="badge bg-red">5</span>
+            </i>
+            <span class="tabbar-label">Label 2</span>
+        </a>
+
+        <a href="#tab4" class="tab-link barsbottom">
+            <i class="icon demo-icon-4"></i>
+            <span class="tabbar-label">Label 4</span>
+        </a>
+    </div>
+</div>
       </div>
     </div>
     <!-- Path to Framework7 Library JS-->
