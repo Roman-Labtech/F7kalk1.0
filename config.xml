@@ -46,6 +46,7 @@
     <engine name="android" spec="^6.2.3" />
     <!--<plugin name="CordovaCallNumberPlugin" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />-->
     <plugin name="CordovaCallNumberPlugin-master" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin" />
+    <plugin name="CordovaCallNumberPlugin" spec="plugins/CordovaCallNumberPlugin" />
     <plugin name="cordova-plugin-console" />
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-inappbrowser" />
@@ -67,7 +68,6 @@
     <splash src="res/img/screen.png" density="land-ldpi"/>
     <splash src="res/img/screen.png" density="land-mdpi"/>
     <splash src="res/img/screen.png" density="land-xhdpi"/>
-
     <splash src="res/img/screen.png" density="port-hdpi"/>
     <splash src="res/img/screen.png" density="port-ldpi"/>
     <splash src="res/img/screen.png" density="port-mdpi"/>
@@ -80,7 +80,7 @@
   <allow-navigation href="*"/>
   <allow-navigation href="tel:*"/>
   <allow-navigation href="mailto:*"/>
-<allow-navigation href="data:*"/>
+  <allow-navigation href="data:*"/>
     
     <icon src="icon.png" />
 </platform>
