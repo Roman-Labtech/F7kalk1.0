@@ -96,26 +96,11 @@ if (n == 1) navigator.app.exitApp();
       
 
    	<script>
-    var myApp = new Framework7();
-    var $$ = Dom7;
- 
-    $$('.open-left-panel').on('click', function (e) {
-        // 'left' position to open Left panel
-        myApp.openPanel('left');
-    });
-    $$('.open-right-panel').on('click', function (e) {
-        // 'right' position to open Right panel
-        myApp.openPanel('right');
-    }); 
-		
-    $$('.panel-close').on('click', function (e) {
-        myApp.closePanel();
-    });
- 
+
   function phonecall(){
-	  alert("call");
-           window.plugins.CallNumber.callNumber(onSuccess, onError, 88313367613);
 	  
+	  alert("call");
+         //  window.plugins.CallNumber.callNumber(onSuccess, onError, 88313367613);
         }
   </script>
    	
