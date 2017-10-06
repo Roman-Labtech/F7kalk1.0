@@ -57,7 +57,7 @@
         }
   </script>
  
-	  
+  
    <script> document.addEventListener("deviceready", appReady, false); 
              function appReady(){ 
                document.addEventListener('backbutton', function (e) {
@@ -76,7 +76,7 @@ return;
 }
 /*Quit app */
 navigator.notification.confirm(
-‘Exit Application ?’, // message
+‘Выйти из приложения ?’, // message
 function (n) {
 if (n == 1) navigator.app.exitApp();
 },
@@ -86,12 +86,15 @@ if (n == 1) navigator.app.exitApp();
 }, false)
 
              } </script>
+             
  <script>
           function exitFromApp()
        {
            navigator.app.exitApp();
        }; 
-      </script>         
+</script>         
+      
+       
   </head>
   
   
@@ -275,7 +278,9 @@ if (n == 1) navigator.app.exitApp();
     3. Рассчитайте время истечения испытуемой жидкости.<br>
     4. Калькулятор выдаст вам полученное значение. Для точного расчета проведите измерения 3 раза.
    <br><br>
-    <a href="#about" class="button button-fill">ДАЛЕЕ</a> 
+    <a href="#about" class="button button-fill">ДАЛЕЕ</a> <br>
+    <a href="#" class="button button-fill" onclick="buttonweb()">Браузер</a> 
+   
 </p>
 						 </div>
                   </div>
@@ -388,14 +393,11 @@ if (n == 1) navigator.app.exitApp();
               <div class="content-block">
                   <div class="content-white">
                   	   <h3 style="center">2 шаг.</h3>
-                   <p>
-                  	Второй замер времени истечения.
-                  	 
-                  </p>
+						  <p>
+							Второй замер времени истечения. 	 
+						  </p>
                  <form class="list-block" name="MyForm2">   
-
         <br>
-        
         <div style="display:block; margin: auto">
         <div style="display:block; margin: auto">
         <input name="stopwatch2" type="text" placeholder="00:00:00" class="" style="  font-family: 'a_LCDNova', arial;; font-size: 5em;height:100px; text-align: center;">
@@ -417,6 +419,7 @@ if (n == 1) navigator.app.exitApp();
           </div>
         </div>
         <br>
+         
           <a href="#izm3" class="button button-fill">ДАЛЕЕ</a>
 </form>
      <br>
