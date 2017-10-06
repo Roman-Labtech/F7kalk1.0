@@ -33,6 +33,20 @@ function onDeviceReady() {
 } 
 function onBackKeyDown() { mainView.router.back(); }
 
+ 
+    $$('.open-left-panel').on('click', function (e) {
+        // 'left' position to open Left panel
+        myApp.openPanel('left');
+    });
+    $$('.open-right-panel').on('click', function (e) {
+        // 'right' position to open Right panel
+        myApp.openPanel('right');
+    }); 
+		
+    $$('.panel-close').on('click', function (e) {
+        myApp.closePanel();
+    });
+ 
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {
@@ -367,11 +381,6 @@ function countPow(n) {
 
 
 
-function phonecall()
-{
-    window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613, true);
-}
-
 function onSuccess(result){
   console.log("Success:"+result);
 }
@@ -399,11 +408,6 @@ document.addEventListener("backbutton", onBackKeyDown, false);
 
 function onBackKeyDown(e) {
    e.preventDefault();
-   alert('Back Button is Pressed!');
 };
 
 
-function phonecall()
-{
-    window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613, true);
-}
