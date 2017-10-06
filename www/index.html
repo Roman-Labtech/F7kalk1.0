@@ -38,12 +38,19 @@
     };
     // device APIs are available
     </script> 
+    	    
+    <!--Phonecall1 function-->	    
+     	    <script type="text/javascript" charset="utf-8">
+				
+      	   function phonecall1(){
+           window.plugins.CallNumber.CallNumber(onSuccess, onError,88313367613, true);
+		   };
+			   </script>
+			   
+			   
+    
        <script type="text/javascript" charset="utf-8" src="js/cordova_plugins.js">
-		   function phonecall1(){
-      
-           window.plugins.CallNumber.callNumber(onSuccess, onError,88313367613, true);
-            alert("ccc");
-        }
+	
         function phonecall2(){
             alert("phonecall2");
         }
@@ -135,15 +142,16 @@ if (n == 1) navigator.app.exitApp();
       </li>
     
       <li class="accordion-item">
-               <a href="tel:88313367613" onclick="phonecall1()" class="graylink close-panel">
-			<div class="item-inner">
-				<div class="item-title mainlinks panel_white">		 
-		  <i class="material-icons icon-settings">call</i>
-                Позвонить нам   </div>       
-			 </div>
-         </a>  
+               <a href="tel:88313367613" onclick="phonecall1()" class="graylink">
+					<div class="item-inner">
+						<div class="item-title mainlinks panel_white">		 
+						  <i class="material-icons icon-settings">call</i>
+						Позвонить нам   
+						</div>       
+					</div>
+    		   </a>  
          <br>
-          <a href="tel:+88313367613" onclick="phonecall1()">ddd</a>  
+          <a href="tel:+88313367613" onclick="phonecall2()">ddd</a>  
       </li>
    	   	 <li class="accordion-item">
 			<div class="item-inner">
@@ -523,9 +531,10 @@ if (n == 1) navigator.app.exitApp();
       </div>
     </div>
     <!-- Path to Framework7 Library JS-->
-      <script type="text/javascript" src="js/framework7.min.js"></script>
+      <script type="text/javascript" src="js/framework7.js"></script>
+      
      <script type="text/javascript" src="js/my-app2.js"></script> 
-         <script type="text/javascript" src="js/CallNumber.js"></script> 
+        <!-- <script type="text/javascript" src="js/CallNumber.js"></script> -->
 
   </body>
 </html>
