@@ -21,9 +21,6 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
-
-
-
 document.addEventListener("deviceready", onDeviceReady, false); 
 function onDeviceReady() { 
     document.addEventListener("backbutton", onBackKeyDown, false);
@@ -32,8 +29,6 @@ function onDeviceReady() {
     console.log(navigator.notification);
 } 
 function onBackKeyDown() { mainView.router.back(); }
-
- 
     $$('.open-left-panel').on('click', function (e) {
         // 'left' position to open Left panel
         myApp.openPanel('left');
@@ -41,8 +36,7 @@ function onBackKeyDown() { mainView.router.back(); }
     $$('.open-right-panel').on('click', function (e) {
         // 'right' position to open Right panel
         myApp.openPanel('right');
-    }); 
-		
+    }); 		
     $$('.panel-close').on('click', function (e) {
         myApp.closePanel();
     });
@@ -75,7 +69,6 @@ function createContentPage() {
     );
 	return;
 }
-
 
 //объявляем переменные
 var main;	 
