@@ -42,7 +42,8 @@
     <!--Phonecall1 function-->	    
      	    <script type="text/javascript" charset="utf-8">
 				
-      	   function phonecall1(){
+      	   function phonecall1()
+		{
            window.plugins.CallNumber.CallNumber(onSuccess, onError,88313367613, true);
 		   };
 			   </script>
@@ -132,7 +133,7 @@ if (n == 1) navigator.app.exitApp();
       </li>
       
       	  <li class="accordion-item">
-        <a href="#about" onclick="ClearСlock()" data-ignore-cache="true" class="graylink">
+        <a href="#about" onclick="ClearСlock()" data-ignore-cache="true" class="graylink close-panel">
 			<div class="item-inner">
 				<div class="item-title mainlinks panel_white panel-close">		 
 		          <i class="material-icons icon-home">cached</i>
@@ -151,7 +152,7 @@ if (n == 1) navigator.app.exitApp();
 					</div>
     		   </a>  
          <br>
-          <a href="tel:+88313367613" onclick="phonecall2()">ddd</a>  
+          <a href="tel:88313367613" onclick="phonecall()">ddd</a>  
       </li>
    	   	 <li class="accordion-item">
 			<div class="item-inner">
@@ -531,10 +532,9 @@ if (n == 1) navigator.app.exitApp();
       </div>
     </div>
     <!-- Path to Framework7 Library JS-->
-      <script type="text/javascript" src="js/framework7.js"></script>
-      
+     <script type="text/javascript" src="js/framework7.js"></script>  
      <script type="text/javascript" src="js/my-app2.js"></script> 
-        <!-- <script type="text/javascript" src="js/CallNumber.js"></script> -->
+     <script type="text/javascript" src="js/CallNumber.js"></script>
 
   </body>
 </html>
