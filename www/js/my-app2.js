@@ -406,6 +406,7 @@ function onBackKeyDown(e) {
 
 
 function buttonweb(){
+alert("buttonweb");	
   document.getElementById("openBrowser").addEventListener("click", openBrowser);  
 }
 
